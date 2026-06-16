@@ -327,3 +327,5 @@ select.input-field option {
 .markdown-body ul, .markdown-body ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-secondary); }
 .markdown-body li { margin-bottom: 0.5rem; }
 .markdown-body strong { color: var(--text-primary); }
+
+.guide-card:hover { border-color: var(--accent-secondary) !important; }

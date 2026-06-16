@@ -38,8 +38,7 @@ export default function GuidesPage() {
                   flexDirection: 'column',
                   transition: 'all var(--transition-fast)'
                 }}
-                onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--accent-secondary)'}
-                onMouseOut={(e) => e.currentTarget.style.borderColor = 'var(--border-color)'}
+                className="guide-card"
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-tertiary)', fontSize: '0.8rem', marginBottom: '1rem' }}>
                     <span>{guide.date}</span>

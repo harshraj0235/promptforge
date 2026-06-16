@@ -93,7 +93,7 @@ export default function PromptCard({ prompt }: PromptCardProps) {
         {/* Social Share (Phase 3) */}
         <div className={styles.socialShare}>
           <a 
-            href={`https://twitter.com/intent/tweet?text=Check out this awesome AI prompt for ${prompt.professionSlug}: ${prompt.title}&url=https://promptforge.example.com/prompts/${prompt.professionSlug}`}
+            href={`https://twitter.com/intent/tweet?text=Check out this awesome AI prompt for ${prompt.profession}: ${prompt.title}&url=https://promptforge.example.com/prompts/${prompt.profession}`}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.shareBtn}
@@ -102,7 +102,7 @@ export default function PromptCard({ prompt }: PromptCardProps) {
             𝕏
           </a>
           <a 
-            href={`https://www.linkedin.com/sharing/share-offsite/?url=https://promptforge.example.com/prompts/${prompt.professionSlug}`}
+            href={`https://www.linkedin.com/sharing/share-offsite/?url=https://promptforge.example.com/prompts/${prompt.profession}`}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.shareBtn}

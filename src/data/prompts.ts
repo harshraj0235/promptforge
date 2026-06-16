@@ -2395,7 +2395,7 @@ export function getPromptCountByProfession(professionSlug: string): number {
 }
 export function getPromptsByProfessionAndTool(professionSlug: string, toolName: string): Prompt[] {
   return prompts.filter(p => 
-    p.professionSlug === professionSlug && 
+    p.profession === professionSlug && 
     p.aiTool.some(t => t.toLowerCase() === toolName.toLowerCase() || t.toLowerCase() === 'all' || toolName === 'all')
   );
 }
