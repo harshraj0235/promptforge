@@ -1,0 +1,171 @@
+.hero {
+  padding: 6rem 0 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroTitle {
+  margin-bottom: 1.5rem;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.heroCta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.heroFeatures {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: var(--text-tertiary);
+  font-size: 0.95rem;
+}
+
+.heroFeatures span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkIcon {
+  color: var(--success);
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.bgDarker {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+}
+
+.sectionHeaderCenter {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionHeaderCenter h2 {
+  margin-bottom: 1rem;
+}
+
+.viewAllLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-secondary);
+  font-weight: 500;
+}
+
+.viewAllLink:hover {
+  text-decoration: underline;
+}
+
+.stepCard {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.stepNumber {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
+  box-shadow: var(--glow-primary);
+}
+
+.stepCard h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.stepCard p {
+  margin: 0;
+}
+
+.ctaSection {
+  padding: 6rem 0;
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: var(--radius-2xl);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(168, 85, 247, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.ctaCard h2 {
+  margin-bottom: 1rem;
+}
+
+.ctaCard p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 4rem 0 3rem; }
+  .heroCta { flex-direction: column; }
+  .sectionHeader { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}

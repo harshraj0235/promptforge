@@ -1,0 +1,102 @@
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding-top: 4rem;
+  margin-top: auto;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.brandCol .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.logoIcon {
+  color: var(--accent-secondary);
+  fill: rgba(168, 85, 247, 0.2);
+}
+
+.description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 300px;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.social a:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.linkCol h3 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.linkCol ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linkCol a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.linkCol a:hover {
+  color: var(--accent-secondary);
+}
+
+.bottomBar {
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .brandCol {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

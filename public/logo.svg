@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="zapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="256" fill="#0a0a1a" />
+  <path d="M576 96L224 608H512L448 928L800 416H512L576 96Z" fill="url(#zapGradient)" stroke="#ffffff" stroke-width="24" stroke-linejoin="round"/>
+  <text x="512" y="900" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="4">PROMPTFORGE</text>
+</svg>
