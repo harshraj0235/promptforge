@@ -12,16 +12,31 @@ interface PromptCardProps {
 
 export default function PromptCard({ prompt }: PromptCardProps) {
   const [expanded, setExpanded] = useState(false);
-  const [rating, setRating] = useState(Math.floor(Math.random() * 2) + 4); // Random initial 4 or 5 star
   const [hoverRating, setHoverRating] = useState(0);
   const [hasRated, setHasRated] = useState(false);
 
   const isLong = prompt.promptText.length > 250;
   const displayTags = [prompt.category, ...prompt.tags].slice(0, 3);
   
-  // Deterministic fake rating data for schema
-  const reviewCount = Math.floor(Math.random() * 50) + 15;
-  const averageRating = (4 + Math.random()).toFixed(1);
+  // Deterministic fake rating data for schema (to avoid hydration mismatch 500 errors)
+  const hashString = (str: string) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash; // Convert to 32bit integer
+    }
+    return Math.abs(hash);
+  };
+  
+  const seed = hashString(prompt.id);
+  const pseudoRandom = (seed % 100) / 100; // Value between 0 and 0.99
+  
+  const initialRating = Math.floor(pseudoRandom * 2) + 4; // 4 or 5
+  const reviewCount = Math.floor(pseudoRandom * 50) + 15;
+  const averageRating = (4 + pseudoRandom).toFixed(1);
+
+  const [rating, setRating] = useState(initialRating);
 
   const handleRate = (index: number) => {
     if (!hasRated) {
