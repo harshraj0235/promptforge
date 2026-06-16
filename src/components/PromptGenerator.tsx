@@ -223,7 +223,30 @@ Please format the response clearly using markdown headings and bullet points whe
             
             <div className={styles.resultActions}>
               <CopyButton text={generatedPrompt} className="btn-primary" />
-              <button className="btn btn-outline" onClick={() => setStep(1)}>
+              
+              <a 
+                href={`https://twitter.com/intent/tweet?text=I just generated an amazing AI prompt for my ${getProfessionBySlug(formData.profession)?.name} tasks using PromptForge! Check it out: https://promptforge.example.com`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+                style={{ padding: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                aria-label="Share on Twitter"
+              >
+                𝕏 Share
+              </a>
+              
+              <a 
+                href="https://www.linkedin.com/sharing/share-offsite/?url=https://promptforge.example.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+                style={{ padding: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                aria-label="Share on LinkedIn"
+              >
+                in Share
+              </a>
+
+              <button className="btn btn-secondary" onClick={() => setStep(1)} style={{ marginLeft: 'auto' }}>
                 Start Over
               </button>
             </div>

@@ -712,6 +712,206 @@ export const professions: Profession[] = [
       },
     ],
   },
+  {
+    slug: "seo-specialist",
+    name: "SEO Specialist",
+    icon: "📈",
+    description: "Dominate search rankings with AI-powered keyword strategies, content outlines, and technical SEO audits.",
+    shortDescription: "Rank higher with AI SEO workflows.",
+    metaTitle: "Best ChatGPT Prompts for SEO Specialists | PromptForge",
+    metaDescription: "Boost your organic traffic. Access expert AI prompts for keyword research, on-page optimization, and SEO content strategy.",
+    relatedKeywords: ["chatgpt prompts for seo", "ai for seo", "seo prompts", "keyword research prompts"],
+    faqs: [
+      { question: "Can ChatGPT do keyword research?", answer: "Yes, by providing seed keywords and asking for long-tail variations, intent classification, and clustering." },
+      { question: "How does AI help with technical SEO?", answer: "AI can generate schema markup (JSON-LD), write robots.txt rules, and create regex for redirects." }
+    ]
+  },
+  {
+    slug: "copywriter",
+    name: "Copywriter",
+    icon: "✍️",
+    description: "Write high-converting landing pages, ads, and emails faster using proven copywriting frameworks and AI.",
+    shortDescription: "High-converting copy with AI.",
+    metaTitle: "Top ChatGPT Prompts for Copywriters | PromptForge",
+    metaDescription: "Never stare at a blank page again. Use these AI prompts for PAS, AIDA, landing pages, and ad copy.",
+    relatedKeywords: ["copywriting prompts", "chatgpt for copywriters", "ai copywriting templates"],
+    faqs: [
+      { question: "Will AI replace copywriters?", answer: "No, AI is a tool that enhances research and drafting. Human copywriters are needed for strategy, emotion, and final polish." },
+      { question: "How to use frameworks with AI?", answer: "Simply instruct the AI: 'Write an email using the PAS (Problem, Agitation, Solution) framework targeting [audience].'" }
+    ]
+  },
+  {
+    slug: "event-planner",
+    name: "Event Planner",
+    icon: "🎉",
+    description: "Streamline event organization, vendor communication, and itinerary planning with custom AI workflows.",
+    shortDescription: "Flawless events planned with AI.",
+    metaTitle: "ChatGPT Prompts for Event Planners | PromptForge",
+    metaDescription: "Organize events efficiently. Get AI prompts for running sheets, vendor emails, and theme brainstorming.",
+    relatedKeywords: ["event planning ai", "chatgpt prompts for event planners", "event management prompts"],
+    faqs: [
+      { question: "How can AI help with event themes?", answer: "Provide the target audience, budget, and season, and AI can generate dozens of unique theme concepts." },
+      { question: "Can it write vendor contracts?", answer: "AI can draft the outline and key clauses, but you should always have legal counsel review formal contracts." }
+    ]
+  },
+  {
+    slug: "fitness-coach",
+    name: "Fitness Coach",
+    icon: "💪",
+    description: "Generate customized workout plans, nutrition guidelines, and motivational client check-ins.",
+    shortDescription: "AI-powered workout & meal plans.",
+    metaTitle: "Best ChatGPT Prompts for Personal Trainers & Fitness Coaches",
+    metaDescription: "Scale your fitness coaching business. Use AI to generate workout splits, macro guides, and client emails.",
+    relatedKeywords: ["personal trainer prompts", "chatgpt for fitness coaches", "workout plan generator ai"],
+    faqs: [
+      { question: "Can AI generate a 12-week program?", answer: "Yes, by specifying the client's goals, experience level, equipment access, and frequency, AI can output a structured 12-week split." },
+      { question: "Is AI good for nutrition advice?", answer: "AI can provide general macro breakdowns and meal ideas, but shouldn't replace a registered dietitian for medical nutrition therapy." }
+    ]
+  },
+  {
+    slug: "real-estate-investor",
+    name: "Real Estate Investor",
+    icon: "🏢",
+    description: "Analyze deals, write seller outreach letters, and evaluate market trends using AI assistance.",
+    shortDescription: "Analyze deals faster with AI.",
+    metaTitle: "Top AI Prompts for Real Estate Investors | PromptForge",
+    metaDescription: "Find off-market deals and analyze ROI. Get prompts for direct mail, deal analysis, and contractor communication.",
+    relatedKeywords: ["real estate investing prompts", "chatgpt for real estate investors", "wholesale real estate ai"],
+    faqs: [
+      { question: "Can AI analyze a real estate deal?", answer: "Yes, if you input the purchase price, rehab cost, ARV, and holding costs, AI can calculate projected ROI and cash-on-cash return." },
+      { question: "How does AI help with wholesaling?", answer: "It can write highly persuasive cold call scripts, text message sequences, and direct mail letters." }
+    ]
+  },
+  {
+    slug: "video-editor",
+    name: "Video Editor",
+    icon: "🎬",
+    description: "Automate script breakdowns, YouTube description writing, and creative hook generation.",
+    shortDescription: "Streamline your video post-production.",
+    metaTitle: "Best ChatGPT Prompts for Video Editors | PromptForge",
+    metaDescription: "Enhance your video editing workflow. Prompts for YouTube chapters, hooks, and storyboarding.",
+    relatedKeywords: ["prompts for video editors", "chatgpt youtube prompts", "ai for video production"],
+    faqs: [
+      { question: "Can AI edit videos?", answer: "Text-based LLMs can't edit video directly, but they can write the exact timestamps, B-roll suggestions, and shot lists for you to follow." }
+    ]
+  },
+  {
+    slug: "architect",
+    name: "Architect",
+    icon: "📐",
+    description: "Generate concept narratives, client proposals, and Midjourney architectural visualization prompts.",
+    shortDescription: "AI for architectural design & proposals.",
+    metaTitle: "Top ChatGPT & Midjourney Prompts for Architects",
+    metaDescription: "Design better with AI. Get Midjourney prompts for renders and ChatGPT prompts for design narratives.",
+    relatedKeywords: ["midjourney prompts for architecture", "chatgpt for architects", "architecture ai"],
+    faqs: [
+      { question: "What is Midjourney good for in architecture?", answer: "Midjourney is incredible for early-stage conceptualization, mood boards, and visualizing materials before creating 3D models." }
+    ]
+  },
+  {
+    slug: "chef",
+    name: "Chef & Restaurateur",
+    icon: "🍳",
+    description: "Create seasonal menus, write recipe descriptions, and manage food costs with AI.",
+    shortDescription: "AI for menu creation & restaurant management.",
+    metaTitle: "Best AI Prompts for Chefs and Restaurant Owners",
+    metaDescription: "Run your kitchen smarter. Prompts for recipe development, menu engineering, and staff training.",
+    relatedKeywords: ["chatgpt for chefs", "restaurant ai prompts", "menu creation prompts"],
+    faqs: [
+      { question: "Can AI create original recipes?", answer: "Yes! Give the AI a list of ingredients you need to use, and it can invent creative flavor pairings and step-by-step recipes." }
+    ]
+  },
+  {
+    slug: "musician",
+    name: "Musician & Producer",
+    icon: "🎸",
+    description: "Brainstorm lyrics, generate chord progressions, and write press releases for your new track.",
+    shortDescription: "AI for songwriting and music marketing.",
+    metaTitle: "Top ChatGPT Prompts for Musicians & Producers",
+    metaDescription: "Overcome writer's block. AI prompts for lyric generation, music theory, and Spotify playlist pitching.",
+    relatedKeywords: ["chatgpt for musicians", "songwriting prompts", "music production ai"],
+    faqs: [
+      { question: "Can ChatGPT write a hit song?", answer: "It can provide a great starting point for lyrics, song structures, and rhyming schemes, but you need to add the soul and melody." }
+    ]
+  },
+  {
+    slug: "ecommerce-owner",
+    name: "E-commerce Owner",
+    icon: "🛒",
+    description: "Write product descriptions, handle customer service, and create Facebook ad copy at scale.",
+    shortDescription: "Scale your online store with AI.",
+    metaTitle: "Best ChatGPT Prompts for E-commerce & Shopify Owners",
+    metaDescription: "Increase your ROAS and conversion rates. AI prompts for product descriptions, email flows, and ad copy.",
+    relatedKeywords: ["ecommerce prompts", "chatgpt for shopify", "product description generator"],
+    faqs: [
+      { question: "How to use AI for product descriptions?", answer: "Give AI your product specs and target audience, and ask it to write a description focusing on benefits rather than features." }
+    ]
+  },
+  {
+    slug: "plumber",
+    name: "Plumber & Tradesman",
+    icon: "🔧",
+    description: "Write estimates, respond to customer inquiries, and optimize your local SEO service pages.",
+    shortDescription: "Grow your local service business.",
+    metaTitle: "ChatGPT Prompts for Plumbers & Home Service Businesses",
+    metaDescription: "Get more local leads. AI prompts for Google Business profile updates, customer reviews, and quotes.",
+    relatedKeywords: ["chatgpt for plumbers", "local seo prompts", "contractor ai"],
+    faqs: [
+      { question: "Why would a plumber use AI?", answer: "To save time on paperwork. AI can instantly write professional quotes, invoice emails, and responses to angry reviews." }
+    ]
+  },
+  {
+    slug: "youtuber",
+    name: "YouTuber / Creator",
+    icon: "🎥",
+    description: "Generate viral video ideas, write hook scripts, and optimize titles/tags for the algorithm.",
+    shortDescription: "Go viral with AI-optimized content.",
+    metaTitle: "Best ChatGPT Prompts for YouTubers and Creators",
+    metaDescription: "Beat the algorithm. Access prompts for video ideation, script hooks, A/B titles, and sponsorships.",
+    relatedKeywords: ["youtube chatgpt prompts", "prompts for content creators", "video script ai"],
+    faqs: [
+      { question: "Can AI write a YouTube script?", answer: "Yes, especially if you outline the key points. AI is great at structuring the intro hook, body, and call-to-action." }
+    ]
+  },
+  {
+    slug: "author",
+    name: "Author / Novelist",
+    icon: "📚",
+    description: "Overcome writer's block, develop complex characters, and plot out story arcs.",
+    shortDescription: "AI for world-building and plotting.",
+    metaTitle: "Top ChatGPT Prompts for Authors and Novelists",
+    metaDescription: "Write your book faster. AI prompts for character sheets, world-building, dialogue, and plot outlines.",
+    relatedKeywords: ["prompts for authors", "chatgpt for writing a book", "fiction writing ai"],
+    faqs: [
+      { question: "Is it ethical to use AI to write a book?", answer: "Many authors use AI as a brainstorming partner or for outlining, while writing the actual prose themselves." }
+    ]
+  },
+  {
+    slug: "travel-agent",
+    name: "Travel Agent",
+    icon: "✈️",
+    description: "Build custom itineraries, write destination guides, and manage client bookings.",
+    shortDescription: "AI-powered travel planning.",
+    metaTitle: "Best ChatGPT Prompts for Travel Agents",
+    metaDescription: "Create unforgettable trips. AI prompts for 7-day itineraries, packing lists, and local recommendations.",
+    relatedKeywords: ["travel agent prompts", "chatgpt for travel planning", "itinerary generator"],
+    faqs: [
+      { question: "Can AI plan a full trip?", answer: "Yes, if you provide the destination, budget, and interests, it can output a day-by-day itinerary with travel times." }
+    ]
+  },
+  {
+    slug: "wedding-photographer",
+    name: "Wedding Photographer",
+    icon: "📸",
+    description: "Write pricing guides, social media captions, and client inquiry responses.",
+    shortDescription: "Automate your photography business.",
+    metaTitle: "ChatGPT Prompts for Wedding Photographers",
+    metaDescription: "Book more weddings. AI prompts for Instagram captions, client emails, and timeline planning.",
+    relatedKeywords: ["prompts for photographers", "wedding photography ai", "photography business prompts"],
+    faqs: [
+      { question: "How can AI help with Instagram?", answer: "Give AI details about the wedding you shot, and it can generate engaging captions with relevant photography hashtags." }
+    ]
+  }
 ];
 
 export function getProfessionBySlug(slug: string): Profession | undefined {

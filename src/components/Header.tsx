@@ -29,7 +29,7 @@ export default function Header() {
           <Link href="/" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
           <Link href="/generator" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>Generator</Link>
           <Link href="/categories" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>Categories</Link>
-          <Link href="/about" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+          <Link href="/guides" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>Guides</Link>
           <Link href="/generator" className="btn btn-primary" onClick={() => setIsMobileMenuOpen(false)}>
             Start Generating
           </Link>

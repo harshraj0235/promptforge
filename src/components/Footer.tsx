@@ -38,22 +38,22 @@ export default function Footer() {
         </div>
 
         <div className={styles.linkCol}>
-          <h3>Resources</h3>
+          <h3>Trending Tools</h3>
           <ul>
-            <li><Link href="/generator">AI Prompt Generator</Link></li>
-            <li><Link href="/categories">All Categories</Link></li>
-            <li><Link href="/blog">Blog & Guides</Link></li>
-            <li><Link href="/premium">Premium Prompt Packs</Link></li>
+            <li><Link href="/prompts/chatgpt/seo-specialist">ChatGPT for SEO</Link></li>
+            <li><Link href="/prompts/midjourney/architect">Midjourney for Architects</Link></li>
+            <li><Link href="/prompts/claude/copywriter">Claude for Copywriters</Link></li>
+            <li><Link href="/prompts/chatgpt/real-estate-agent">ChatGPT for Real Estate</Link></li>
           </ul>
         </div>
 
         <div className={styles.linkCol}>
-          <h3>Company</h3>
+          <h3>Resources</h3>
           <ul>
-            <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-            <li><Link href="/privacy">Privacy Policy</Link></li>
-            <li><Link href="/terms">Terms of Service</Link></li>
+            <li><Link href="/generator">AI Prompt Generator</Link></li>
+            <li><Link href="/categories">All Categories</Link></li>
+            <li><Link href="/guides">Prompt Guides</Link></li>
+            <li><Link href="/guides/chatgpt-prompt-engineering-guide">Engineering Frameworks</Link></li>
           </ul>
         </div>
       </div>

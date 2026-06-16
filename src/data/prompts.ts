@@ -2393,3 +2393,9 @@ export function getFeaturedPrompts(): Prompt[] {
 export function getPromptCountByProfession(professionSlug: string): number {
   return prompts.filter((p) => p.profession === professionSlug).length;
 }
+export function getPromptsByProfessionAndTool(professionSlug: string, toolName: string): Prompt[] {
+  return prompts.filter(p => 
+    p.professionSlug === professionSlug && 
+    p.aiTool.some(t => t.toLowerCase() === toolName.toLowerCase() || t.toLowerCase() === 'all' || toolName === 'all')
+  );
+}
