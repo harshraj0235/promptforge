@@ -15,15 +15,15 @@ export async function generateStaticParams() {
   
   const params = [];
   for (const profession of slugs) {
-    for (const tool of toolIds) {
-      params.push({ tool, profession });
+    for (const slug of toolIds) {
+      params.push({ slug, profession });
     }
   }
   return params;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ tool: string, profession: string }> }) {
-  const { tool: toolSlug, profession: profSlug } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string, profession: string }> }) {
+  const { slug: toolSlug, profession: profSlug } = await params;
   const profession = getProfessionBySlug(profSlug);
   const tool = aiTools.find(t => t.id === toolSlug);
   
@@ -36,8 +36,8 @@ export async function generateMetadata({ params }: { params: Promise<{ tool: str
   };
 }
 
-export default async function ToolProfessionPage({ params }: { params: Promise<{ tool: string, profession: string }> }) {
-  const { tool: toolSlug, profession: profSlug } = await params;
+export default async function ToolProfessionPage({ params }: { params: Promise<{ slug: string, profession: string }> }) {
+  const { slug: toolSlug, profession: profSlug } = await params;
   const profession = getProfessionBySlug(profSlug);
   const tool = aiTools.find(t => t.id === toolSlug);
   

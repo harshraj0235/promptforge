@@ -10,12 +10,11 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export async function generateStaticParams() {
-  const slugs = getAllProfessionSlugs();
-  return slugs.map((slug) => ({ profession: slug }));
+  return getAllProfessionSlugs().map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ profession: string }> }) {
-  const { profession: slug } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const profession = getProfessionBySlug(slug);
   
   if (!profession) return { title: "Not Found" };
@@ -27,8 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ professio
   };
 }
 
-export default async function ProfessionPage({ params }: { params: Promise<{ profession: string }> }) {
-  const { profession: slug } = await params;
+export default async function ProfessionPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const profession = getProfessionBySlug(slug);
   
   if (!profession) {
