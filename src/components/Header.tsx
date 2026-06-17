@@ -18,8 +18,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
-      <div className={`container ${styles.headerContainer}`}>
+    <>
+      <div style={{ background: 'var(--accent-primary)', color: 'white', textAlign: 'center', padding: '0.5rem', fontSize: '0.9rem', fontWeight: 500 }}>
+        🎉 Launch Special: Unlock the Premium Prompt Masterclass Bundle for 70% Off! <Link href="/premium" style={{ color: 'white', textDecoration: 'underline', fontWeight: 'bold', marginLeft: '0.5rem' }}>Claim Offer →</Link>
+      </div>
+      <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+        <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo}>
           <Zap className={styles.logoIcon} />
           <span>PromptForge</span>
@@ -44,5 +48,6 @@ export default function Header() {
         </button>
       </div>
     </header>
+    </>
   );
 }

@@ -551,6 +551,91 @@ Write in clear, objective technical language. Avoid opinion — focus on measura
   // MARKETING MANAGER (25 prompts)
   // ============================================================
   {
+    id: "premium-seo-001",
+    profession: "seo-specialist",
+    category: "Strategy & Planning",
+    title: "Master SEO Content Brief Generator (Premium)",
+    promptText: `ACT AS an Elite Technical SEO Director with 15 years of experience.
+YOUR TASK is to generate a comprehensive, data-driven Content Brief for a writer.
+
+INPUT VARIABLES:
+- Target Keyword: [Insert Keyword]
+- Target Audience: [Insert Audience]
+- Primary Competitors: [Insert 3 Competitor URLs]
+
+STEP-BY-STEP INSTRUCTIONS:
+1. Search Intent Analysis: Define the exact user intent (Informational, Transactional, Navigational) and the psychological trigger behind the search.
+2. Semantic Entity Map: Provide a list of 15 LSI keywords and NLP entities that MUST be included to achieve high relevance scoring in Google's Knowledge Graph.
+3. H-Tag Structure: Create a Mutually Exclusive, Collectively Exhaustive (MECE) outline using H2s and H3s. Include strategic places for tables and bulleted lists.
+4. Featured Snippet Optimization: Write the exact 45-55 word paragraph that should be placed immediately under the H1 to win the Google Featured Snippet.
+
+FORMATTING: Output as a highly structured Markdown document with clear headings. Use professional SEO terminology.`,
+    tags: ["content-brief", "nlp", "featured-snippet"],
+    difficulty: "advanced",
+    aiTool: ["ChatGPT", "Claude"],
+    isPremium: true
+  },
+  {
+    id: "premium-cw-001",
+    profession: "copywriter",
+    category: "Content Creation",
+    title: "Direct Response Sales Letter Framework (Premium)",
+    promptText: `You are an A-List Direct Response Copywriter (in the style of Gary Halbert and Eugene Schwartz).
+I need you to write a high-converting long-form sales letter.
+
+PRODUCT INFO:
+- Product Name: [Insert Name]
+- Price: [Insert Price]
+- Unique Mechanism: [How it works differently]
+- Target Audience: [Who they are and their biggest pain point]
+
+FRAMEWORK TO FOLLOW (The 12-Step Foolproof Formula):
+1. The Pattern Interrupt Headline
+2. The Shocking Statement / Hook
+3. Define the Problem (Agitate the pain)
+4. Present the Solution (Introduce the product)
+5. Explain the Unique Mechanism (Why nothing else worked before)
+6. State the Benefits (Not just features, but emotional transformations)
+7. Social Proof (Testimonial placeholders)
+8. The Irresistible Offer
+9. The Risk Reversal (Guarantee)
+10. Scarcity / Urgency
+11. Call to Action
+12. The P.S. (Final emotional pull)
+
+CONSTRAINT: Write in a punchy, conversational tone. Use short sentences (max 15 words). Use formatting (bolding, italics) to control the reading rhythm. Do not use corporate jargon.`,
+    tags: ["sales-letter", "direct-response", "copywriting"],
+    difficulty: "advanced",
+    aiTool: ["Claude", "ChatGPT"],
+    isPremium: true
+  },
+  {
+    id: "premium-mkt-001",
+    profession: "marketing-manager",
+    category: "Strategy & Planning",
+    title: "Omnichannel Product Launch Campaign Strategy (Premium)",
+    promptText: `Act as a Fractional CMO who has successfully scaled 3 SaaS startups to $100M ARR.
+Generate a comprehensive 30-Day Omnichannel Go-To-Market (GTM) Launch Strategy.
+
+PRODUCT DETAILS:
+- Product: [Insert Product/Service]
+- Launch Date: [Insert Date]
+- Total Budget: [Insert Budget]
+- Primary KPIs: [Insert KPIs e.g., 5000 signups, $50k MRR]
+
+DELIVERABLES REQUIRED:
+1. Pre-Launch Teaser Phase (Days T-14 to T-1): Social media cadence, email waitlist sequence concepts, and influencer outreach angles.
+2. Launch Day Blitz (Day 0): Exact hour-by-hour execution plan across Email, Twitter/X, LinkedIn, and Product Hunt.
+3. Post-Launch Momentum (Days 1 to 14): Retargeting ad strategy, user onboarding email sequence flow, and webinar/demo schedule.
+4. Budget Allocation Table: Recommend how to split the [Insert Budget] across Meta Ads, Google Ads, Influencers, and Community tools.
+
+FORMAT: Use a detailed timeline matrix. Be highly specific with actionable tactics, not generic advice.`,
+    tags: ["gtm", "product-launch", "strategy"],
+    difficulty: "advanced",
+    aiTool: ["ChatGPT", "Claude"],
+    isPremium: true
+  },
+  {
     id: "mkt-001",
     profession: "marketing-manager",
     category: "Content Creation",

@@ -70,12 +70,42 @@ export default function PromptCard({ prompt }: PromptCardProps) {
         </div>
       </div>
       
-      <div className={`${styles.promptContent} ${!expanded && isLong ? styles.collapsed : ""}`}>
-        <pre className={styles.preText} itemProp="text">{prompt.promptText}</pre>
-        {!expanded && isLong && <div className={styles.fadeOverlay}></div>}
+      <div className={`${styles.promptContent} ${!expanded && isLong && !prompt.isPremium ? styles.collapsed : ""}`}>
+        {prompt.isPremium ? (
+          <div className={styles.premiumOverlay}>
+            <div className={styles.premiumBlur}>
+              {/* Fake blurred text representation */}
+              <pre className={styles.preText}>
+                ACT AS an Elite Technical SEO Director...
+                YOUR TASK is to generate a comprehensive...
+                INPUT VARIABLES:
+                - Target Keyword: [Insert Keyword]
+                - Target Audience: [Insert Audience]
+                ...
+              </pre>
+            </div>
+            <div className={styles.premiumCallToAction}>
+              <div style={{ marginBottom: '1rem' }}>
+                <span style={{ fontSize: '2rem' }}>🔒</span>
+              </div>
+              <h4 style={{ marginBottom: '0.5rem', fontSize: '1.2rem', color: 'var(--text-primary)' }}>Premium Prompt</h4>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '0.9rem' }}>
+                This is a highly-engineered, multi-step framework. Unlock this and 500+ other advanced prompts.
+              </p>
+              <a href="/premium" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                Unlock Premium Pack - $15
+              </a>
+            </div>
+          </div>
+        ) : (
+          <>
+            <pre className={styles.preText} itemProp="text">{prompt.promptText}</pre>
+            {!expanded && isLong && <div className={styles.fadeOverlay}></div>}
+          </>
+        )}
       </div>
       
-      {isLong && (
+      {isLong && !prompt.isPremium && (
         <button 
           className={styles.expandBtn} 
           onClick={() => setExpanded(!expanded)}

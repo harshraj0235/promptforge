@@ -30,9 +30,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!profession || !tool) return { title: "Not Found" };
   
   return {
-    title: `Best ${tool.name} Prompts for ${profession.name}s | PromptForge`,
-    description: `Discover the ultimate collection of ${tool.name} prompts specifically designed for ${profession.name}s. Enhance your workflow today.`,
-    keywords: `${tool.name} prompts for ${profession.name}, ${tool.name} ${profession.name}, best ai prompts`,
+    title: `Best ${tool.name} Prompts for ${profession.name}s | Copy & Paste`,
+    description: `Unlock the ultimate database of 50+ ${tool.name} prompts specifically engineered for ${profession.name}s. Automate tasks, write better content, and save hours of work.`,
+    keywords: `${tool.name} prompts for ${profession.name}, best ${tool.name} ${profession.name} prompts, ai for ${profession.name}s`,
+    alternates: {
+      canonical: `https://promptforge.example.com/prompts/${toolSlug}/${profSlug}`
+    }
   };
 }
 
@@ -47,8 +50,34 @@ export default async function ToolProfessionPage({ params }: { params: Promise<{
   
   const prompts = getPromptsByProfessionAndTool(profSlug, tool.name);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://promptforge.example.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Prompts", "item": "https://promptforge.example.com/categories" },
+      { "@type": "ListItem", "position": 3, "name": profession.name, "item": `https://promptforge.example.com/prompts/${profSlug}` },
+      { "@type": "ListItem", "position": 4, "name": tool.name, "item": `https://promptforge.example.com/prompts/${toolSlug}/${profSlug}` }
+    ]
+  };
+
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": tool.name,
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <Header />
       <main className="main-content">
         {/* Breadcrumbs */}
@@ -103,19 +132,59 @@ export default async function ToolProfessionPage({ params }: { params: Promise<{
           )}
         </div>
 
-        {/* FAQs - Dynamically adjusting FAQs for the tool */}
-        <div className="container" style={{ marginBottom: "5rem", maxWidth: "800px" }}>
-          <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>{tool.name} + {profession.name} FAQs</h2>
-          <FAQSection faqs={[
-            {
-              question: `Why is ${tool.name} good for ${profession.name}s?`,
-              answer: `${tool.name} is excellent for ${profession.name}s because it can rapidly automate standard tasks, generate new ideas based on specific frameworks, and improve overall productivity.`
-            },
-            {
-              question: `How do I write a good ${tool.name} prompt for this role?`,
-              answer: `Always specify your role ("Act as an expert ${profession.name}"), define the output format (e.g., bullet points, table), and provide sufficient context. Use our Prompt Generator to build these automatically.`
-            }
-          ]} />
+        {/* Semantic SEO Content Block */}
+        <div className="container" style={{ marginBottom: "4rem", maxWidth: "800px" }}>
+          <section style={{ marginBottom: "3rem" }}>
+            <h2 style={{ marginBottom: "1rem" }}>Why Use {tool.name} for {profession.name} Tasks?</h2>
+            <p style={{ color: "var(--text-secondary)", lineHeight: "1.7", marginBottom: "1rem" }}>
+              As a {profession.name}, your time is valuable. Leveraging {tool.name} allows you to automate repetitive tasks, brainstorm creative solutions, and generate high-quality deliverables in a fraction of the time. The secret to getting the best results from {tool.name} lies in <strong>Prompt Engineering</strong>. By using highly structured, professionally vetted prompts, you ensure the AI understands your context, constraints, and desired output format.
+            </p>
+            <p style={{ color: "var(--text-secondary)", lineHeight: "1.7" }}>
+              Our database of {tool.name} prompts for {profession.name}s is continuously updated to reflect the latest capabilities of the AI model, ensuring you always have a competitive edge in your industry.
+            </p>
+          </section>
+
+          <section style={{ marginBottom: "3rem" }}>
+            <h2 style={{ marginBottom: "1rem" }}>{tool.name} + {profession.name} FAQs</h2>
+            <FAQSection faqs={[
+              {
+                question: `What is the best way to write a ${tool.name} prompt for a ${profession.name}?`,
+                answer: `The most effective framework is: 1) Assign a persona ("Act as a Senior ${profession.name}"), 2) Define the specific task clearly, 3) Provide context or constraints, and 4) Specify the output format (e.g., Markdown table, bulleted list).`
+              },
+              {
+                question: `Can I use these ${tool.name} prompts for commercial purposes?`,
+                answer: `Yes! All the free and premium prompts in our library are designed for professional, commercial use. They are specifically crafted to generate outputs that you can use in your daily workflow.`
+              },
+              {
+                question: `Does ${tool.name} understand advanced ${profession.name} terminology?`,
+                answer: `Absolutely. ${tool.name} has been trained on a massive corpus of text and understands industry-specific jargon. Using precise terminology in your prompt actually helps the AI generate more accurate and professional responses.`
+              }
+            ]} />
+          </section>
+        </div>
+
+        {/* Cross-Linking / Spider Web Architecture */}
+        <div className="container" style={{ marginBottom: "5rem", borderTop: "1px solid var(--border-color)", paddingTop: "4rem" }}>
+          <div className="grid grid-cols-2" style={{ gap: "2rem" }}>
+            <div>
+              <h3 style={{ marginBottom: "1rem", fontSize: "1.2rem" }}>Other AI Tools for {profession.name}s</h3>
+              <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                {aiTools.filter(t => t.id !== toolSlug).slice(0, 4).map(t => (
+                  <li key={t.id}>
+                    <Link href={`/prompts/${t.id}/${profSlug}`} style={{ color: "var(--accent-secondary)", textDecoration: "underline" }}>
+                      {t.name} Prompts for {profession.name}s
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 style={{ marginBottom: "1rem", fontSize: "1.2rem" }}>Explore Other Professions</h3>
+              <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                <li style={{ color: "var(--text-secondary)" }}>Looking for a different role? Check out our <Link href="/categories" style={{ color: "var(--accent-secondary)" }}>full categories list</Link>.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
