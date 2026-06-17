@@ -1,3 +1,5 @@
+import { generatedPremiumPrompts } from "./generated-premium-prompts";
+
 export interface Prompt {
   id: string;
   profession: string; // slug
@@ -23,7 +25,7 @@ export const promptCategories = [
   "Sales & Outreach",
 ] as const;
 
-export const prompts: Prompt[] = [
+const handcraftedPrompts: Prompt[] = [
   // ============================================================
   // REAL ESTATE AGENT (25 prompts)
   // ============================================================
@@ -2442,7 +2444,14 @@ Also include 3 follow-up email templates for non-responses.`,
   },
 ];
 
-// Utility functions
+// The full array of prompts combines the hand-crafted ones above and the programmatically generated ones.
+const allPrompts: Prompt[] = [
+  ...handcraftedPrompts,
+  ...generatedPremiumPrompts
+];
+
+export const prompts = allPrompts;
+
 export function getPromptsByProfession(professionSlug: string): Prompt[] {
   return prompts.filter((p) => p.profession === professionSlug);
 }
